@@ -1,0 +1,30 @@
+{
+  "name": "qiuxiaoce-mcp",
+  "version": "0.1.0",
+  "description": "Official Model Context Protocol (MCP) Server for QiuXiaoCe (球小策) Football Big Data & AI Analysis.",
+  "main": "src/index.js",
+  "bin": {
+    "qiuxiaoce-mcp": "bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddzyx/qiuxiaoce-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "football",
+    "soccer",
+    "sports-data",
+    "claude-desktop",
+    "cursor",
+    "qiuxiaoce"
+  ],
+  "author": "QiuXiaoCe Team <contact@qiuxiaoce.com> (https://www.qiuxiaoce.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ddzyx/qiuxiaoce-mcp/issues"
+  },
+  "homepage": "https://www.qiuxiaoce.com"
+}
