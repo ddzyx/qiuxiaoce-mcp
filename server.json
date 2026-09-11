@@ -1,0 +1,39 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/server.json",
+  "name": "io.github.ddzyx/qiuxiaoce",
+  "title": "QiuXiaoCe Football Big Data & Match Intelligence",
+  "description": "Official MCP server providing real-time European top 5 league standings, team queries, fixtures, and football intelligence facts. Supports free tier out-of-the-box.",
+  "version": "0.1.0",
+  "author": {
+    "name": "QiuXiaoCe Team",
+    "url": "https://www.qiuxiaoce.com"
+  },
+  "homepage": "https://www.qiuxiaoce.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddzyx/qiuxiaoce-mcp"
+  },
+  "license": "MIT",
+  "runtime": "node",
+  "transport": {
+    "type": "stdio"
+  },
+  "command": "npx",
+  "args": ["-y", "qiuxiaoce-mcp"],
+  "capabilities": {
+    "tools": [
+      {
+        "name": "get_standings",
+        "description": "Get real-time football standings for European top leagues."
+      },
+      {
+        "name": "search_teams",
+        "description": "Search football teams by Chinese/English name."
+      },
+      {
+        "name": "get_today_digest",
+        "description": "Get today's key match digest and preview information."
+      }
+    ]
+  }
+}
