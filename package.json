@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Official Model Context Protocol (MCP) Server for QiuXiaoCe (球小策) Football Big Data & AI Analysis.",
   "main": "src/index.js",
+  "mcpName": "io.github.ddzyx/qiuxiaoce",
   "bin": {
     "qiuxiaoce-mcp": "bin/cli.js"
   },
