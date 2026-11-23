@@ -2,8 +2,8 @@
   "$schema": "https://modelcontextprotocol.io/schema/server.json",
   "name": "io.github.ddzyx/qiuxiaoce",
   "title": "QiuXiaoCe Football Big Data & Match Intelligence",
-  "description": "Official MCP server providing real-time European top 5 league standings, team queries, fixtures, and football intelligence facts. Supports free tier out-of-the-box.",
-  "version": "0.1.0",
+  "description": "Official MCP server providing real-time football standings, keyless daily fixtures, club/league search, xG match packs, lineups, and tactical statistics.",
+  "version": "0.2.0",
   "author": {
     "name": "QiuXiaoCe Team",
     "url": "https://www.qiuxiaoce.com"
@@ -18,22 +18,36 @@
   "transport": {
     "type": "stdio"
   },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.qiuxiaoce.com/mcp"
+    }
+  ],
   "command": "npx",
   "args": ["-y", "qiuxiaoce-mcp"],
+  "env": {
+    "QIUXIAOCE_API_KEY": {
+      "type": "string",
+      "required": false,
+      "description": "Optional API Key for high-frequency or deep match pack analysis. Free tier features require no key."
+    }
+  },
   "capabilities": {
     "tools": [
-      {
-        "name": "get_standings",
-        "description": "Get real-time football standings for European top leagues."
-      },
-      {
-        "name": "search_teams",
-        "description": "Search football teams by Chinese/English name."
-      },
-      {
-        "name": "get_today_digest",
-        "description": "Get today's key match digest and preview information."
-      }
+      { "name": "get_public_today_fixtures", "description": "Get today's public tactical match schedule (no key required)." },
+      { "name": "get_standings", "description": "Get real-time football standings for European and global leagues (no key required)." },
+      { "name": "search_teams", "description": "Search football teams by Chinese/English name and get standardized team ID (no key required)." },
+      { "name": "search_leagues", "description": "Search football leagues and tournaments by name (no key required)." },
+      { "name": "get_topscorers", "description": "Get league top scorers leaderboard (no key required)." },
+      { "name": "get_topassists", "description": "Get league top assists leaderboard (no key required)." },
+      { "name": "get_team_form", "description": "Get recent team form and attacking/defensive averages." },
+      { "name": "get_h2h", "description": "Get head-to-head historical results between two clubs." },
+      { "name": "get_match_pack", "description": "Get comprehensive pre-match tactical intelligence pack including xG, rankings, and injuries." },
+      { "name": "get_fixture_stats", "description": "Get full-time team statistics including shots, corners, possession, and xG." },
+      { "name": "get_fixture_lineups", "description": "Get starting lineups, formations, and substitutes for a match." },
+      { "name": "search_players", "description": "Search players by Chinese or English name." },
+      { "name": "get_today_digest", "description": "Get today's featured match digest and overview." }
     ]
   }
 }
