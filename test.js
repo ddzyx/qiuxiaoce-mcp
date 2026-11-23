@@ -11,6 +11,10 @@ child.stdout.on('data', (data) => {
     const msg = JSON.parse(line);
     console.log('Received MCP message:', msg.id, msg.result ? 'SUCCESS' : msg.error);
     if (msg.id === 2) {
+      if (!Array.isArray(msg.result.tools) || msg.result.tools.length < 13) {
+        console.error('❌ Expected at least 13 tools, got:', msg.result.tools?.length);
+        process.exit(1);
+      }
       console.log('✅ Tools count:', msg.result.tools.length);
       console.log('🎉 MCP Server test passed!');
       child.kill();
