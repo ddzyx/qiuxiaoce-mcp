@@ -1,6 +1,7 @@
 # 球小策 MCP Server (qiuxiaoce-mcp)
 
 [![NPM Version](https://img.shields.io/npm/v/qiuxiaoce-mcp.svg)](https://www.npmjs.com/package/qiuxiaoce-mcp)
+[![Glama MCP Server](https://glama.ai/mcp/servers/ddzyx/qiuxiaoce-mcp/badges/score.svg)](https://glama.ai/mcp/servers/ddzyx/qiuxiaoce-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Website](https://img.shields.io/badge/Official-QiuXiaoCe.com-blue)](https://www.qiuxiaoce.com)
 
