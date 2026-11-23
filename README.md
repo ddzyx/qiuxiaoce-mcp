@@ -46,10 +46,17 @@
 
 | 工具名称 | 功能说明 | 权限说明 |
 | :--- | :--- | :--- |
-| `get_standings` | 获取欧洲五大联赛（英超/西甲/意甲/德甲/法甲）实时积分榜与主客场数据 | 🆓 免费开放，无需密钥 |
+| `get_public_today_fixtures` | 获取今日公开纯技战术赛程列表（最多 60 场） | 🆓 免费开放，无需密钥 |
+| `get_standings` | 获取欧洲五大联赛及主流赛事实时积分榜与主客场数据 | 🆓 免费开放，无需密钥 |
 | `search_teams` | 足球俱乐部中英文智能别名检索（输入“曼联”、“阿森纳”返回官方规范 ID） | 🆓 免费开放，无需密钥 |
 | `search_leagues` | 足球赛事与联赛中英文名称检索 | 🆓 免费开放，无需密钥 |
-| `get_today_digest` | 获取今日重点赛事列表、分析状态与彩票编号摘要 | 需配置 `QIUXIAOCE_API_KEY` 环境变量 |
+| `get_topscorers` / `get_topassists` | 获取指定联赛射手榜与助攻榜 | 🆓 免费开放，无需密钥 |
+| `get_team_form` / `get_h2h` | 球队近期走势与两队历史交锋统计 | 需配置 `QIUXIAOCE_API_KEY` |
+| `get_match_pack` | 旗舰单场技战术全景数据包（xG、排名、伤停、攻防均值） | 需配置 `QIUXIAOCE_API_KEY` |
+| `get_fixture_stats` / `get_fixture_lineups` | 单场全场技术统计与首发阵容/阵型 | 需配置 `QIUXIAOCE_API_KEY` |
+| `search_players` / `get_today_digest` | 球员检索与今日重点赛事全景摘要 | 需配置 `QIUXIAOCE_API_KEY` |
+
+> 🌐 **远程 Streamable HTTP 接入**：除本地 `npx qiuxiaoce-mcp` 外，官方同步提供云端远程 MCP 端点 `https://www.qiuxiaoce.com/mcp`（OAuth 2.0 / WorkBuddy 生态已打通）。
 
 ---
 
